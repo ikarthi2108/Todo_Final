@@ -16,6 +16,9 @@ const AddTask: React.FC<AddTaskProps> = ({ fetchTaskData }) => {
   const Tokenpayload = Token ? (jwtDecode(Token) as { id: string }) : null;
   const userToken = Tokenpayload?.id;
 
+
+  console.log(Token);
+  
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (userToken) {
